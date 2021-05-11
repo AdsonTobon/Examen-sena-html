@@ -43,3 +43,6 @@ nav li a:hover{
 header #menu-mobile:checked ~ nav {
     display: block;
 }
+footer{
+ font-style: italic;   
+}
