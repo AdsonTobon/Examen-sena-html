@@ -1,48 +1,143 @@
 *{
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
+/*Menu Mobile*/
 header{
     width: 100%;
     height: 50px;
     background-color: wheat;
+    position: fixed;
+    z-index: 300;
 }
 header label img:hover{
     background-color: tomato;
     cursor: pointer;
 }
+#nav-mobile{
+    display: none;
+}
 #menu-mobile{
     display: none;
 }
-nav{
+#nav-one{
     width: 200px;
     background-color: teal;
     text-align: center;
     display: none;
     
 }
-nav li{
+#nav-one li{
     list-style: none;
     border: 1px solid white;
     padding: 8px 0 8px 0;
 }
-nav li:hover{
+#nav-one li:hover{
    background-color: tomato;
 
 }
-nav li a{
+#nav-one li a{
     margin-right: 30px;
     color: white;
     text-decoration:none;
     
 }
-nav li a:hover{
+#nav-one li a:hover{
     color: black;
     
 }
-header #menu-mobile:checked ~ nav {
+header #menu-mobile:checked ~ #nav-one {
     display: block;
 }
-footer{
- font-style: italic;   
+
+/*Menu Desktop*/
+
+#nav-two{
+    display: flex;
+    justify-content: center;
+}
+
+#nav-two li{
+    list-style: none;
+    padding: 8px 0 8px 0;
+
+}
+
+#nav-two li a{
+    margin-right: 30px;
+    font-weight: bold;
+    color: black;
+    text-decoration:none;
+    
+}
+
+#nav-two li a:hover{
+    color: teal;
+    
+}
+/*Body*/
+#Home{
+    width: 100%;
+    height: 800px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: teal;
+}
+#About{
+    width: 100%;
+    height: 800px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: tomato;
+}
+#Images{
+    width: 100%;
+    height: 800px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+}
+#container-text-home{
+    width: 80%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.364);
+    border-radius: 10px;
+    font-weight: bold;
+}
+#container-text-about{
+    width: 80%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.364);
+    border-radius: 10px;
+    font-weight: bold;
+}
+#container-text-images{
+    width: 80%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.364);
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+/*Ventana Pop Up*/
+
+
+
+@media(max-width:768px) {
+    #nav-mobile{
+        display: block;
+    }
+    #nav-desktop{
+        display: none;
+    }
 }
